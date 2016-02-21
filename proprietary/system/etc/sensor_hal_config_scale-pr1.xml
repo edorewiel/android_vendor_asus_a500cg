@@ -4,8 +4,8 @@
   <accelerometer>
     <platform_config>
       <name>accel</name>
-      <activate_path>/sys/bus/i2c/devices/5-0019/lis3dh/enable</activate_path>
-      <poll_path>/sys/bus/i2c/devices/5-0019/lis3dh/poll</poll_path>
+      <activate_path>/sys/bus/i2c/devices/5-0019/enable</activate_path>
+      <poll_path>/sys/bus/i2c/devices/5-0019/poll</poll_path>
       <data_path></data_path>
       <config_path></config_path>
       <mapper axis_x="Y" axis_y="X" axis_z="Z"></mapper>
@@ -25,10 +25,10 @@
   </accelerometer>
   <light>
     <platform_config>
-      <name>light</name>
-      <activate_path>/dev/apds990x_lsensor</activate_path>
-      <poll_path></poll_path>
-      <data_path>/dev/apds990x_lsensor</data_path>
+      <name>apds990x_als</name>
+      <activate_path>/sys/bus/i2c/devices/5-0039/apds990x_als/enable</activate_path>
+      <poll_path>/sys/bus/i2c/devices/5-0039/apds990x_als/poll</poll_path>
+      <data_path></data_path>
       <config_path></config_path>
       <mapper axis_x="X" axis_y="Y" axis_z="Z"></mapper>
       <scale axis_x="1.0" axis_y="1.0" axis_z="1.0"></scale>
@@ -47,11 +47,11 @@
   </light>
   <proximity>
     <platform_config>
-      <name>proximity</name>
-      <activate_path>/dev/apds990x_psensor</activate_path>
-      <poll_path>0</poll_path>
-      <data_path>/sys/bus/i2c/devices/5-0039/prox0_raw</data_path>
-      <config_path>/sys/bus/i2c/devices/5-0039/prox0_thresh_above_value</config_path>
+      <name>apds990x_ps</name>
+      <activate_path>/sys/bus/i2c/devices/5-0039/apds990x_ps/enable</activate_path>
+      <poll_path>/sys/bus/i2c/devices/5-0039/apds990x_ps/poll</poll_path>
+      <data_path>/sys/bus/i2c/devices/5-0039/apds990x_ps/rawdata</data_path>
+      <config_path>/sys/bus/i2c/devices/5-0039/apds990x_ps/thresh</config_path>
       <mapper axis_x="X" axis_y="Y" axis_z="Z"></mapper>
       <scale axis_x="1.0" axis_y="1.0" axis_z="1.0"></scale>
       <range min="0" max="0"></range>
@@ -70,8 +70,8 @@
   <compass>
     <platform_config>
       <name>lsm303cmp</name>
-      <activate_path>/sys/bus/i2c/devices/5-001e/lsm303cmp/enable</activate_path>
-      <poll_path>/sys/bus/i2c/devices/5-001e/lsm303cmp/poll</poll_path>
+      <activate_path>/sys/bus/i2c/devices/5-001e/enable</activate_path>
+      <poll_path>/sys/bus/i2c/devices/5-001e/poll</poll_path>
       <data_path></data_path>
       <config_path>/data/compass.conf</config_path>
       <mapper axis_x="Y" axis_y="X" axis_z="Z"></mapper>
